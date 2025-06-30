@@ -1,9 +1,9 @@
 import json
 import requests
 
-def deleteUser(id=None):
-    if id !=None:
-        url=f"https://reqres.in/api/users/{id}"
+def deleteUser(userId=None):
+    if userId !=None:
+        url=f"https://reqres.in/api/users/{userId}"
     else:
         url="https://reqres.in/api/users"
 
