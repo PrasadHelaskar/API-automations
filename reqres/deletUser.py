@@ -16,6 +16,6 @@ def deleteUser(id=None):
     print("Responce Code:",apiCall.status_code)
 
     if apiCall.status_code ==204:
-        print("Deleted Successfully")
+        print(apiCall.text)
 
 deleteUser(3)

@@ -1,12 +1,16 @@
 import requests
 
-res=requests.get("https://reqres.in/api/users?page=2")
+header={
+    "x-api-key": "reqres-free-v1"
+}
 
-# print(json.dumps(res.json(), indent=4))
+res=requests.get("https://reqres.in/api/users?page=2&delay=2",headers=header,timeout=3)
 
-data=res.json()
+print(res.status_code)
 
-users=data['data']
+responce=res.json()
+
+users=responce['data']
 
 for i in users:
     print(f"ID: {i['id']}")
